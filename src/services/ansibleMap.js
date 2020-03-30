@@ -70,6 +70,7 @@ export function osdsVars (vars) {
 
     switch (vars.cephVersion) {
     case "14":
+    case "15":
         // ceph-volume based OSDs
         forYML.osd_scenario = 'lvm';
         break;
@@ -223,6 +224,7 @@ export function mgrsVars (vars) {
         "12" : ["prometheus", "status"],
         "13" : ["prometheus", "status", "dashboard"],
         "14" : ["prometheus", "status", "dashboard", "pg_autoscaler"],
+        "15" : ["prometheus", "status", "dashboard", "pg_autoscaler"],
     };
 
     forYML.ceph_mgr_modules = module_map[vars.cephVersion];

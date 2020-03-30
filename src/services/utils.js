@@ -54,6 +54,7 @@ export function getCephVersionNumber(versionStr) {
     case "12 (Luminous)":
     case "13 (Mimic)":
     case "14 (Nautilus)":
+    case "15 (Octopus)":
         return versionStr.split(' ')[0];
     }
 }
